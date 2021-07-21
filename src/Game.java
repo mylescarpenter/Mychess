@@ -9,23 +9,22 @@ import java.util.Scanner;
  */
 public class Game {
     /** holds board data*/
-    private Board board;
+    private static Board board = new Board();
     /** collects user input */
-    private Scanner in;
+    private static Scanner in = new Scanner(System.in);
 
     /**
      * constructs new game instance and initializes a Board and Scanner
      */
     public Game(){
-        board = new Board();
-        in = new Scanner(System.in);
+
     }
 
     /**
      * the initial method used to run the game
      * Home menu of game, gives options to start game or quit the game
      */
-    public void run(){
+    public static void run(){
         String input;
         boolean valid = false;
 
@@ -47,7 +46,7 @@ public class Game {
     /**
      * starts a chess game, white moves first
      */
-    public void start(){
+    private static void start(){
         /**
          * gameActive is true while the game is live and false when the game has been
          * completed(either one side has won or the players have drawn)
@@ -62,7 +61,7 @@ public class Game {
         }
     }
 
-    public void quit(){
+    private static void quit(){
         System.out.print("Thanks for playing!");
     }
 }
