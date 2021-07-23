@@ -17,8 +17,8 @@ public abstract class Piece {
     public boolean getColor(){
         return color;
     }
-//public void move(){
-//
-//    }
+    public void move(){
+
+    }
 
 }

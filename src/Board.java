@@ -45,4 +45,16 @@ public class Board {
             System.out.println();
         }
     }
+
+    public boolean isValid(String move){
+        return true;
+    }
+
+    public void move(String move){
+
+    }
+
+    public String checkState(){
+        return "";
+    }
 }
