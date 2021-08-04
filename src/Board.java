@@ -57,4 +57,12 @@ public class Board {
     public String checkState(){
         return "";
     }
+
+    public Square get(int x, int y){
+        return board[x][y];
+    }
+
+    public void edit(Square square){
+
+    }
 }
