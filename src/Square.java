@@ -6,6 +6,12 @@ public class Square {
     private int row;
     private int col;
 
+    /**
+     *
+     * @param row - rank, row of square(indexed at 0)
+     * @param col - file, column of square(indexed at 0)
+     * @param piece - the piece located on space; if no piece, equals null
+     */
     public Square(int row, int col, Piece piece){
         this.piece = piece;
         this.row = row;
