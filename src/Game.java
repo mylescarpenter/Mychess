@@ -63,14 +63,25 @@ public class Game {
             if(!turn) System.out.println("black's turn");
             //DEBUG
             boolean moveValid = false;
-            String input = "";
-            while(!moveValid){
-                System.out.println("Enter Move: ");
-                input = in.next();
-                moveValid = board.isValid(input);
-            }
 
-            board.move(input);
+            int x1 = 0;
+            int y1 = 0;
+            int x2 = 0;
+            int y2 = 0;
+
+           /* while(!moveValid){*/
+                System.out.println("Enter x1: ");
+                x1 = in.nextInt();
+                System.out.println("Enter y1: ");
+                y1 = in.nextInt();
+                System.out.println("Enter x2: ");
+                x2 = in.nextInt();
+                System.out.println("Enter y2: ");
+                y2 = in.nextInt();
+                /*moveValid = board.isValid(input);*/
+          /*  }*/
+
+            board.move(x1, y1, x2, y2);
 
             if(board.checkState().equals("checkmate") || board.checkState().equals("stalemate")) gameActive = false;
             turn = !turn;

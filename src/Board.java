@@ -46,12 +46,20 @@ public class Board {
         }
     }
 
-    public boolean isValid(String move){
-        return true;
+    /**
+     * moves piece at x1, y1 to location x2, y2 and sets x1, y1 space == null (or empty), (indexed at 0 from top left corner)
+     * @param x1
+     * @param y1
+     * @param x2
+     * @param y2
+     */
+    public void move(int x1, int y1, int x2, int y2){
+        board[x2][y2] = board[x1][y1];
+        board[x1][y1] = null;
     }
 
-    public void move(String move){
-
+    public boolean isValid(String move){
+        return true;
     }
 
     public String checkState(){
